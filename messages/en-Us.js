@@ -22,7 +22,11 @@ export default {
     gridView: 'Grid View',
     listView: 'List View',
     addingWc: 'Adding new workspace',
-    emptyWorkspaceMessage: 'You can add a new project by pressing "Add project" button.',
+    emptyWorkspaceMessage: 'You can add a new project by pressing "Add" button.',
+    emptyWorkspaceMessageApp: 'You can add a new app by pressing "Add" button.',
+    projects: 'Projects',
+    apps: 'Apps',
+    app: 'App',
     gdpr: 'GDPR Certificate',
     community: 'Community',
     downloadDesktopApp: 'Download Desktop App',
@@ -87,7 +91,8 @@ export default {
     save: 'Save',
     discard: 'Discard',
     pleaseSelTab: 'Please select a table.',
-
+    //RetableUserColumnInput
+    select: 'Select',
     //RetableAutomationTriggerInput
     table: 'Table',
     selectTable: 'Select a table',
@@ -100,10 +105,10 @@ export default {
     noAutomotionViewer: 'There is no automations in this project.',
     automationRunCountWarning:
       'You have completed your monthly automation run count. Your Automation run count credit will be renewed on {date}.',
-    automationCountWarning: 'You can create a maximum of {count} automations in a workspace.',
+    automationCountWarning: 'You can create a maximum of {count} automations in a project.',
     automationCountInfo: 'You used {usedCount} of {totalCount} automation.',
     runCount: 'Run count',
-    automationRunCountInfo: 'Total of running automation in this workspace.',
+    automationRunCountInfo: 'Total of running automation in this project.',
 
     //RetableCalendarDropdown
     Hm: ' HH:mm',
@@ -156,8 +161,8 @@ export default {
     typeProject: 'Type: Project',
     typeWorkspace: 'Type: Workspace',
     restore: 'Restore',
-    Restored: 'Restored',
-    restoring: 'Restore',
+    restored: 'Restored',
+    restoring: 'Restoring',
     remove: 'Remove',
     download: 'Download',
     removed: 'Removed',
@@ -168,6 +173,9 @@ export default {
     selectSomeOptions: 'Select option(s)',
     searchOptions: 'Search in option(s)',
     selectOption: 'Select an option',
+    //RetableExpandDropdown
+    itsEmpty: "It's empty.",
+    col: 'Col',
 
     // RetableExpandCellModal
     cellPreview: 'Cell Preview',
@@ -256,6 +264,7 @@ export default {
     maliciousMessage2: 'Report malicious form.',
     shareForm: 'Share Form',
     responseWarn: 'You must be logged in to receive these form responses.',
+    loginToVote: 'You must be logged in to vote.',
 
     // RetablePublicFormView
     thankForSubmission: 'Thank you for your submission.',
@@ -323,6 +332,10 @@ export default {
     emptyFileWarning: 'This file is empty.',
     insertData: 'Insert Data',
     replaceData: 'Replace Data',
+    wrongURLFormat: 'Wrong URL format.',
+    importFileURL: 'Import File URL',
+    importFileURLDesc: 'Import a new table from a file URL.',
+    inaccessibleURL: 'URL cannot be accessed.',
 
     // RetableInviteMoreModal
     enterEmail: 'Please enter an email',
@@ -641,6 +654,8 @@ export default {
     max: 'Max',
     emptyCellDef: 'This column will fill empty cells using given default value.',
     textDes: 'A line of text.',
+    richTextDes: 'Data can be formatted and displayed in format.',
+    richText: 'Rich Text',
     numDes: 'A line of numbers.',
     checkboxDes: 'A small box in which to place a check mark.',
     imgDes: 'Image allow you to add images which can then be viewed or downloaded.',
@@ -701,6 +716,26 @@ export default {
     enterPrompt: 'Please enter your prompt to generate a valid ChatGPT response.',
     gptDes: 'ChatGPT column',
     prompt: 'Prompt',
+    currencySymbolPlacement: 'Currency symbol placement',
+    percentSymbolPlacement: 'Percent symbol placement',
+    voteDes: 'It allows you to vote on the rows in your table.',
+    voteRules: 'Rules',
+    voteRule1: 'Each user can vote once and no history data is saved.',
+    voteRule2:
+      'When the row is duplicated, the values in the vote cell are reset for data security.',
+    voteRule3: 'Paste operation cannot be performed for data security.',
+    voteRule4: 'Only users with the "Owner" role can clear the cell.',
+
+    //RetableGPT
+    secretKey: 'Secret Key',
+    apiKeysOpenAI: 'API Keys - OpenAI API',
+    askQuesitonGpt: 'Ask a question to gpt with columns data.',
+
+    exampleGpt1: 'Who is CEO of {CompanyNameColumn}',
+    exampleGpt1b: '{CompanyNameColumn}',
+    exampleGpt2:
+      'How many medals did {CountryNameColumn}  win in the 2020 Olympics? Answer as numbers only.',
+    exampleGpt2b: '{CountryNameColumn} ',
 
     // RetableSpreadsheet
     formShare: `The form must be shared to share the row. 
@@ -960,7 +995,10 @@ export default {
     externallyProjectsDesc: 'Projects saved from Retable Spreadsheet or an external source.',
     workspaceDescription: 'Type workspace description',
     workspaceDesc: 'Default Workspace',
-    newProject: 'Add project',
+    newProject: 'Add a project',
+    newApp: 'Add an app',
+    renameApp: 'Rename app',
+    deleteApp: 'Delete app',
     sureDeleteWorkspace: `You are about to delete this workspace.`,
 
     // RetableWorkspaceListView
@@ -1040,14 +1078,28 @@ export default {
     currency: 'Currency',
     rating: 'Rating',
     lookup: 'Lookup',
-    rollup: 'Rollup',
+    richtext: 'Rich Text',
     uuid: 'Unique Identifier',
     qrcode: 'QR Code',
     gpt: 'GPT',
+    vote: 'Vote',
+    rollup: 'Rollup',
     last100Actions: 'Last 100 Actions',
     last10Actions: 'Last 10 Actions',
     '3Owner': '3 Owner',
     '10Owner': '10 Owner',
+    proPlanTitle1: 'Online Forms',
+    proPlanTitle2: 'HTML Embedding',
+    proPlanTitle3: 'Project Count',
+    proPlanTitle4: 'Table Count',
+    proPlanTitle5: 'Records per Project',
+    proPlanTitle6: 'Attachment Space per Workspace',
+    proPlanTitle7: 'Ask to Update',
+    proPlanTitle8: 'Change History',
+    proPlanTitle9: 'Snapshot',
+    proPlanTitle10: 'Basic & Advanced Column Types',
+    proPlanTitle11: 'Kanban, Calendar, Card, Map, Grid, List, Form & Chart View',
+    proPlanTitleUnlimitedVal: 'Unlimited',
 
     // RetableSearchInput
     searchInWorkspace: 'Search in Workspaces or Projects',
@@ -1100,10 +1152,12 @@ export default {
     showw: 'Show',
     personal: 'Personal',
     bussiness: 'Business',
-    settings: 'Settings',
     createNewApi: 'Create new API',
     deleteKeyWarning: 'You are about to delete this key.',
-
+    organizationAdminAccount: 'Organization admin',
+    organizationDescriptionAccount: 'Organization description',
+    organizationNameAccount: 'Organization name',
+    settings: 'Settings',
     // saga swall
     invSent: '👋 We have already sent an invitation 📧  email. 👍',
     justNow: 'Just now',
@@ -1251,6 +1305,31 @@ export default {
     atSchTime: 'At a scheduled time',
     sendRecords: 'Send records',
     selectToField: 'Select the "To" field.',
+    callWebhooks: 'Call webhooks',
+    params: 'Params',
+    headers: 'Headers',
+    body: 'Body',
+    webhookErrorInvalidUrl: 'Please enter a valid URL.',
+    webhookErrorRequiredHeaders:
+      'Please provide a value for both the name and value fields in the Headers section.',
+    queryName: 'Query name',
+    queryValue: 'Query value',
+    headerName: 'Header name',
+    headerValue: 'Header value',
+    contentType: 'Content Type',
+    httpMethod: 'Http Method',
+    noParamsInfo: 'No query parameters are present for this request.',
+    automationLogRunSuccess: 'Automation completed successfully.',
+    automationLogRunError: 'Automation failed with an error.',
+    automationLogCreate: 'Automation created successfully.',
+    automationLogUpdate: 'Automation updated successfully.',
+    automationLogSendEmail: 'Automation triggered by {userName} and e-mail sent.',
+    automationLogSendEmailWithoutUser: 'Automation triggered and e-mail sent.',
+    request: 'Request',
+    response: 'Response',
+    automationCreatedByUser: 'Automation created by {userName}.',
+    automationUpdatedByUser: 'Automation updated by {userName}.',
+    automationTriggedByUser: 'Triggered by {userName}.',
 
     // datavalidation
     minvalue: 'Min value:',
@@ -1643,6 +1722,8 @@ export default {
     selectCate: 'Please select a column from Categories field. 📈',
     custChart: 'Change values or change chart type if you want to customize your chart. 🥧',
     exCharts: 'You can see example charts below.',
+    pieChartShowValue: 'Show Value',
+    pieChartShowPercentage: 'Show Percentage',
 
     // Retable List View
     warningDeleteLastRow: 'It is not possible to delete the last row.',
@@ -1737,8 +1818,30 @@ export default {
     youCantRemoveMembers: "You can't remove team members.",
     memberNotFound: 'Member not found!',
     memberNotFoundWarning: 'Not found members to add this team',
+    //RetableOrganizationSettings
+    organizationDescription: 'Organization Description',
+    //RetableOrganizationMembers
+    noInvitedMembersFound: 'No invited members found.',
+
+    //RetableOrganizationDetail
+    brand: 'Brand',
+    members: 'Members',
+    settings: 'Settings',
+    //RetableOrganizationBrand
+    primaryColor: 'Primary Color',
+    secondaryColor: 'Secondary Color',
+    chooseAnImage: 'Choose An Image',
+    setDefault: 'Set Default',
+    exampletext: 'Example Text',
+    brandIconValidation1: 'PNG or JPEG file type.',
+    brandIconValidation2: 'Under 1MB file size.',
+    brandIconValidation3: 'Square resolution(e.g., 40x40, 100x100).',
+    brandIconValidation4: '16:3 aspect ratio for better.',
 
     // Brand
+    brandTitle: 'Brand Title',
+    brandLogo: 'Brand Logo',
+    brandIcon: 'Brand Icon',
     brandTitleMustMin3Char: 'Brand title must be at least 3 characters.',
     brandTitleCanNotBeEmpty: 'Brand title can not be empty.',
     brandIconSizeError: 'Brand icon size must be under 1MB.',
@@ -1845,6 +1948,8 @@ export default {
     createNewCalendarColumn: 'Add a new date&time column',
     usingCalendarColumn: 'Using date&time column',
     usingDateRange: 'Using date range',
+    //RetableMApModal.js
+    locationCell: 'Location Cell',
     setEndDate: 'Set an end date field',
 
     // Map View
@@ -1866,6 +1971,24 @@ export default {
     week: 'Week',
     day: 'Day',
     today: 'Today',
+    //AddViewMenu.js
+    kanbanView: 'Kanban View',
+    calenderView: 'Calender View',
+    mapView: 'Map View',
+    cardView: 'Card View',
+    addAview: 'Add a view',
+    //locationColumnInput
+    address: 'Address',
+
+    //KanbanStackHeader.js
+    uncategorized: 'Uncategorized',
+    record: 'records',
+
+    //AddNewStack.js
+    addNewStack: 'Add New Stack',
+
+    //RetableKanbanViewToolbar.js
+    stackedBy: 'Stacked by',
 
     // Kanban View
     deleteStack: 'Delete Stack',
@@ -1897,9 +2020,12 @@ export default {
 
     // Desktop
     openWithRetable: 'Open with Retable',
-    openAsNewProject: 'Open As A New Project',
-    existingVersionWillOpen: '*The existing version will open.',
-    versionYouWantToOpenWillOpen: '*The version you want to open will open.',
+    noWorkspaceWarning: `You don't have a workspace where you can open this version. Add a workspace.`,
+    currentVersionTitle: 'Open on an existing project',
+    currentVersionDescription: 'It opens the last version of the project.',
+    existVersionTitle: 'Add a new project',
+    existVersionDescription: 'Choose a workspace and create a new Retable project.',
+    projectPermissionWarning: `You do not have permission to access this project. The project may have been deleted or you may be removed from the project. You can try adding a new project.`,
     open: 'Open',
 
     // Switch View
@@ -1925,9 +2051,17 @@ export default {
     // Form View
     dragImage: 'Drag or select an image here',
 
+    // RetableApp
+    appNameTitle: 'App Name',
+    typeAppName: 'Type App Name',
+    saveAsPDF: 'Save as PDF',
+    // Form View
+    dragImage: 'Drag or select an image here',
+
     // Card View
     customizeCards: 'Customize Cards',
     imageColumn: 'Image Column',
+    selectAnImageColumn: 'Select An Image Column',
     selectAnCardColumn: 'Select an image, QR or color column',
     usingCardColumn: 'Using image, QR or color column',
     selectCardColumnDesc: 'You can display your selected cell value in the card header.',
@@ -1935,6 +2069,9 @@ export default {
     addCardColumn: 'Add an image, QR or color column',
     createNewCardColumn: 'Add new {columnType} column',
     deleteItem: 'Delete item',
+
+    // Elements Left Content
+    elements: 'Elements',
 
     // General Toast
     tableCopied: 'Table copied.',
@@ -2010,6 +2147,9 @@ export default {
     writer: 'Writer',
     others: 'Others',
 
+    //FormulaPopover.js
+    examples: 'Examples',
+
     // Congrats.js
     congratulations: 'Congratulations',
     congratsDescription:
@@ -2020,6 +2160,166 @@ export default {
     congratsDiscord: 'Have questions? Join our Discord server',
     sweet: 'Sweet',
 
+    //Header cell
+    referanceHeaderCellFrom: '{to} from {from}',
+
+    //RetableAutomationTriggerInput partII
+    //month part
+    january: 'January',
+    february: 'February',
+    march: 'March',
+    april: 'April',
+    may: 'May',
+    june: 'June',
+    july: 'July',
+    august: 'August',
+    september: 'September',
+    october: 'October',
+    november: 'November',
+    december: 'December',
+
+    //dayOfWeek part
+    sunday: 'Sunday',
+    monday: 'Monday',
+    tuesday: 'Tuesday',
+    wednesday: 'Wednesday',
+    thursday: 'Thursday',
+    friday: 'Friday',
+    saturday: 'Saturday',
+    //dayOfMonth part
+    auto1st: '1st',
+    auto2nd: '2nd',
+    auto3rd: '3rd',
+    auto4th: '4th',
+    auto5th: '5th',
+    auto6th: '6th',
+    auto7th: '7th',
+    auto8th: '8th',
+    auto9th: '9th',
+    auto10th: '10th',
+    auto11th: '11th',
+    auto12th: '12th',
+    auto13th: '13th',
+    auto14th: '14th',
+    auto15th: '15th',
+    auto16th: '16th',
+    auto17th: '17th',
+    auto18th: '18th',
+    auto19th: '19th',
+    auto20th: '20th',
+    auto21st: '21st',
+    auto22nd: '22nd',
+    auto23rd: '23rd',
+    auto24th: '24th',
+    auto25th: '25th',
+    auto26th: '26th',
+    auto27th: '27th',
+    auto28th: '28th',
+    auto29th: '29th',
+    auto30th: '30th',
+    auto31st: '31st',
+
+    //tabs part
+    tabsSeconds: 'Seconds',
+    tabsMinutes: 'Minutes',
+    tabsHours: 'Hours',
+    tabsDay: 'Day',
+    tabsMonth: 'Month',
+    tabsYear: 'Year',
+
+    //quartz part
+    everyLabel: 'Every day',
+    dayOfWeekIncrementLabel1: 'Every',
+    dayOfWeekIncrementLabel2: 'day(s) starting on',
+
+    dayOfMonthIncrementLabel1: 'Every',
+    dayOfMonthIncrementLabel2: 'day(s) starting on the',
+    dayOfMonthIncrementLabel3: 'of the month',
+
+    dayOfWeekAndLabel: 'Specific day of week (choose one or many)',
+
+    dayOfWeekRangeLabel1: 'Every day between',
+    dayOfWeekRangeLabel2: 'and',
+
+    dayOfMonthAndLabel: 'Specific day of month (choose one or many)',
+
+    dayOfMonthLastDayLabel: 'On the last day of the month',
+    dayOfMonthLastDayWeekLabel: 'On the last weekday of the month',
+    dayOfWeekLastNTHDayWeekLabel1: 'On the last',
+    dayOfWeekLastNTHDayWeekLabel2: 'of the month',
+    dayOfMonthDaysBeforeEndMonthLabel: 'day(s) before the end of the month',
+
+    dayOfMonthNearestWeekDayOfMonthLabel1: 'Nearest weekday (Monday to Friday) to the',
+    dayOfMonthNearestWeekDayOfMonthLabel2: 'of the month',
+
+    dayOfWeekNTHWeekDayOfMonthLabel1: 'On the',
+    dayOfWeekNTHWeekDayOfMonthLabel2: 'of the month',
+
+    monthEveryLabel: 'Every month',
+    monthIncrementLabel1: 'Every',
+    monthIncrementLabel2: 'month(s) starting at month',
+    monthAndLabel: 'Specific month (choose one or many)',
+    monthRangeLabel1: 'Every month between month',
+    monthRangeLabel2: 'and month',
+
+    secondEveryLabel: 'Every second',
+    secondIncrementLabel1: 'Every',
+    secondIncrementLabel2: 'second(s) starting at second',
+    secondAndLabel: 'Specific second (choose one or many)',
+    secondRangeLabel1: 'Every second between second',
+    secondRangeLabel2: 'and second',
+
+    minuteEveryLabel: 'Every minute',
+    minuteIncrementLabel1: 'Every',
+    minuteIncrementLabel2: 'minute(s) starting at minute',
+    minuteAndLabel: 'Specific minute (choose one or many)',
+    minuteRangeLabel1: 'Every minute between minute',
+    minuteRangeLabel2: 'and minute',
+
+    hourEveryLabel: 'Every hour',
+    hourIncrementLabel1: 'Every',
+    hourIncrementLabel2: 'hour(s) starting at hour',
+    hourAndLabel: 'Specific hour (choose one or many)',
+    hourRangeLabel1: 'Every hour between hour',
+    hourRangeLabel2: 'and hour',
+
+    yearEveryLabel: 'Any year',
+    yearIncrementLabel1: 'Every',
+    yearIncrementLabel2: 'year(s) starting at year',
+    yearAndLabel: 'Specific year (choose one or many)',
+    yearRangeLabel1: 'Every year between year',
+    yearRangeLabel2: 'and year',
+
+    //unix part starts here
+
+    uDayEveryLabel: 'Every day',
+    uDayOdWeekIncrementLabel1: 'Every',
+    uDayOdWeekIncrementLabel2: 'day(s) of week',
+    uDayOfMonthIncrementLabel1: 'Every',
+    uDayOfMonthIncrementLabel2: 'day(s) of month',
+    uDayOdWeekAndLabel: 'Specific day of week (choose one or many)',
+    uDayOdMonthAndLabel: 'Specific day of month (choose one or many)',
+
+    uMonthEveryLabel: 'Every month',
+    uMonthIncrementhLabel1: 'Every',
+    uMonthIncrementhLabel2: 'month(s)',
+    uMonthAndLabel: 'Specific month (choose one or many)',
+    uMonthRangeLabel1: 'Every month between month',
+    uMonthRangeLabel2: 'and month',
+
+    uMinuteEveryLabel: 'Every minute',
+    uMinuteIncrementLabel1: 'Every',
+    uMinuteIncrementLabel2: 'minute(s)',
+    uMinuteAndLabel: 'Specific minute (choose one or many)',
+    uMinuteRangeLabel1: 'Every minute between minute',
+    uMinuteRangeLabel2: 'and minute',
+
+    uHourEveryLabel: 'Every hour',
+    uHourIncrementLabel1: 'Every',
+    uHourIncrementLabel2: 'hour(s)',
+    uHourAndLabel: 'Specific hour (choose one or many)',
+    uHourRangeLabel1: 'Every hour between hour',
+    uHourRangeLabel2: 'and hour',
     // Groupbymenu
     groupByColumnInfo: 'Column data is accessible while the grouped column is hidden.',
 
@@ -2027,5 +2327,39 @@ export default {
     digitSeparator: 'Digit Separator',
     comma: 'Comma',
     dot: 'Dot',
+
+    //RetableThemeSwitch
+    themeSwitch: 'Switch theme',
+
+    //RetableTableViewBody
+    enterToAddNewRow: 'Enter to add new row.',
+
+    //RetableFreeTrialModal
+    freeTrialModalTitle: 'Pro',
+    // Delete Account
+    deleteMyAccount: 'Delete My Account',
+    delErrOrgAdmin: 'You must delete your organization before deleting your account.',
+    delErrOrgMember:
+      'Organization admin must dismissal you from the organization. You can connect to your organization admin.',
+    deleteAccount: 'Delete Account',
+    thisAccountWillBeDeleted: 'This account will be deleted.',
+    needToKnowBeforeDeleteAccount: 'You need to know before the account is deleted.',
+    whatWillHappenWorkspace: 'What will happen to my workspaces if I delete my account?',
+    whatWillHappenWorkspaceContent:
+      "If you are the only user in your workspace, your workspaces will be deleted and you will not be able to access them again. If there is more than one 'Owner' in your workspaces, any Owner will be assigned to the workspaces as a 'Creator' and these workspaces won't be deleted.",
+    whatWillHappenData: 'What will happen to my data?',
+    whatWillHappenDataContent:
+      'In case your account is deleted, all projects, tables, views and data in the deleted workspace will be permanently deleted.',
+    isMyaccountTemporarlyDeleted: 'Is my account temporarily deleted, can I signup again?',
+    isMyaccountTemporarlyDeletedContent:
+      'You can sign up again after your account is deleted, but you cannot access your data, you will be defined as a new user.',
+    dontForgetBackup: "Don't forget to back up your data before deleting your account!",
+    notBeAbleToAccessData:
+      'When you delete your account, you will not be able to access your data, so before deleting your account, be sure to export and backup your important data.',
+    acceptDeleteAccount: 'I have read the terms written above and I accept to delete my account.',
+    deleteAccountDoesNotMatch:
+      'The logged in account does not match the account making the request. Please login with the account making the request.',
+    accountDeleteSuccess: 'Your account is successfully deleted.',
+    delErrAppsumoUser: 'You must refund from AppSumo before deleting your account.',
   },
 };

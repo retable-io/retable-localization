@@ -24,7 +24,11 @@ export default {
     gridView: 'Izgara Görünümü',
     listView: 'Liste Görünümü',
     addingWc: 'Yeni çalışma alanı eklenyor',
-    emptyWorkspaceMessage: '"Proje ekle" butonuna basarak yeni proje ekleyebilirsiniz.',
+    emptyWorkspaceMessage: '"Ekle" butonuna basarak yeni proje ekleyebilirsiniz.',
+    emptyWorkspaceMessageApp: '"Ekle" butonuna basarak yeni uygulama ekleyebilirsiniz.',
+    projects: 'Projeler',
+    apps: 'Uygulamalar',
+    app: 'Uygulama',
     gdpr: 'GDPR Sertifikası',
     community: 'Topluluk',
     downloadDesktopApp: 'Masaüstü Uygulamasını İndir',
@@ -85,10 +89,11 @@ export default {
     save: 'Kaydet',
     discard: 'Devam et',
     pleaseSelTab: 'Lütfen, Tablo seçiniz.',
-
+    //RetableUserColumnInput
+    select: 'Seçin',
     //RetableAutomationTriggerInput
     table: 'Tablo',
-    selectTable: 'Bir table seçin',
+    selectTable: 'Bir tablo seçin',
     column: 'Kolon',
 
     //RetableAutomation
@@ -99,10 +104,12 @@ export default {
     noAutomotionViewer: 'Bu projede otomasyon yok.',
     automationRunCountWarning:
       'Aylık otomasyon çalıştırma limitiniz tamamlandı. Krediniz {date} tarihinde yenilenecektir.',
-    automationCountWarning: 'Bir çalışma alanında en fazla {count} otomasyon oluşturabilirsiniz.',
+    automationCountWarning: 'Bir projede en fazla {count} otomasyon oluşturabilirsiniz.',
     automationCountInfo: '{totalCount} otomasyondan {usedCount} tanesini kullanıyorsunuz.',
     runCount: 'Çalışma sayısı',
-    automationRunCountInfo: 'Bu çalışma alanındaki otomasyonların toplam çalışma sayısı.',
+    automationRunCountInfo: 'Bu projedeki otomasyonların toplam çalışma sayısı.',
+    //Formulation
+    formulaDesc: 'Her satırda bir değer hesaplayın.',
 
     //RetableCalendarDropdown
     Hm: ' HH:mm',
@@ -155,7 +162,7 @@ export default {
     typeProject: 'Tip: Proje',
     typeWorkspace: 'Tip: Çalışma alanı',
     restore: 'Geri Yükle',
-    Restoree: 'Geri Yüklendi',
+    restored: 'Geri Yüklendi',
     remove: 'Kaldır',
     download: 'İndir',
     restoring: 'Yükleniyor',
@@ -167,7 +174,9 @@ export default {
     selectSomeOptions: "Seçenekler'i seçin",
     searchOptions: 'Seçeneklerde arayın',
     selectOption: 'Bir seçenek seçin',
-
+    //RetableExpandDropdown
+    itsEmpty: 'Boş.',
+    col: 'Kolon',
     // RetableExpandCellModal
     cellPreview: 'Hücre Önizleme',
     done: 'Tamamlandı',
@@ -255,6 +264,7 @@ export default {
     maliciousMessage2: 'Kötü amaçlı formu bildirin.',
     shareForm: 'Formu Paylaş',
     responseWarn: 'Bu form yanıtlarını almak için giriş yapmalısınız.',
+    loginToVote: 'Oy vermek için giriş yapmalısınız.',
 
     // RetablePublicFormView
     thankForSubmission: 'Gönderiniz için teşekkür ederiz.',
@@ -323,7 +333,10 @@ export default {
     emptyFileWarning: 'Bu dosya boş.',
     insertData: 'Veri Ekle',
     replaceData: 'Veri Değiştir',
-
+    importFileURL: "Bir dosya URL'i içe aktar",
+    importFileURLDesc: "Bir dosya URL'inden yeni bir tablo içe aktarın.",
+    wrongURLFormat: 'Yanlış URL formatı.',
+    inaccessibleURL: "URL'ye ulaşılamıyor",
     // RetableInviteMoreModal
     enterEmail: 'Lütfen bir e-posta girin',
     cantInvite5: "Aynı anda 5'ten fazla kullanıcı davet edilemez.",
@@ -523,8 +536,10 @@ export default {
     // RetableReferenceTable
     selectReferenceTable: 'Referans tablosunu seçin',
     lookUpColumn: 'Kolon seç',
+    rollupColumn: 'Toparlama kolonu',
     noPremissionOthers: 'Diğer tabloları görüntüleme izniniz yok.',
     selectRefCol: 'Referans kolonu seçin',
+    rollupColumnConfigured: 'Toplama sütunları, özelleştir sütununda yapılandırılmalıdır.',
 
     // RetableLookupValue
     selectReferencedColumn: 'Referanslı kolon seçin',
@@ -532,6 +547,8 @@ export default {
     selectLookupColumn: 'Değer aranacak kolon seçin.',
     noReferencedColumn:
       'Bir değer arama kolonu eklemek için bir referans kolonuna ihtiyacınız var. Değer arama kolonunu eklemeden önce referans kolonunu ekleyin.',
+    noReferencedColumnRollup:
+      'Toparlama eklemek için bir referans sütununa ihtiyacınız var. Bu toparlama sütununu yapılandırmadan önce referans sütununu ekleyin',
 
     // RetableRowData
     noImageFound: 'Resim bulunamadı.',
@@ -580,7 +597,7 @@ export default {
     custCol: 'Kolonu özelleştir',
     baicTypeCol: 'Temel',
     advancedTypeCol: ' Gelişmiş',
-    premiumTypeCol: 'Premium',
+    premiumTypeCol: 'Bonus',
     premiumBetaTitle: 'Pro ve Team hesapları için beta sürümünde ücretsiz',
     collaborator: 'Ortak Çalışan',
     addUsers: 'Kullanıcıları hücrelere ekleyin.',
@@ -636,6 +653,8 @@ export default {
     max: 'Maksimum',
     emptyCellDef: 'Bu kolon, verilen varsayılan değeri kullanarak boş hücreleri dolduracaktır.',
     textDes: 'Bir metin satırı.',
+    richTextDes: 'Veriler formatlanabilir ve formatlı şekilde görüntülenir.',
+    richText: 'Zengin Metin',
     numDes: 'Bir sayı satırı.',
     checkboxDes: 'Onay işareti koymak için küçük bir kutu.',
     imgDes:
@@ -666,6 +685,13 @@ export default {
     protocolRequired: "URL'in protokol kısmını yazmalısınız.",
     lookupValue: 'Değer arama',
     lookupvalues: 'Değer Aramalar',
+    rollupValue: 'Toparlama Değeri',
+    rollupValues: 'Toparlama Değerleri',
+    rollupDesc:
+      'Toparlama sütunu, bu tabloya başvurulan değerlerden elde edilen verileri özetlemenize yardımcı olur.',
+    includeAllValuesRollup: 'Aynı kategorideki tüm değerleri hesaplamaya dahil edin.',
+    includeAllValuesRollupDesc:
+      'Onay kutusu işaretlenirse, aynı kategorideki tüm değerler hesaplamaya dahil edilir. İşaretlenmezse, yalnızca seçtiğiniz veriler hesaplamaya dahil edilir.',
     lookUpDes: 'Referans tablodan başka bir değer arayın.',
     selectLookupValue: 'Lütfen referanslı kolon ve değer aranacak alanı seçiniz.',
     createdAtDes: 'Kaydın oluşturulduğu tarih ve saati gösterir.',
@@ -691,6 +717,26 @@ export default {
     selectSourceColumnSwal:
       'Geçerli bir ChatGPT yanıtı oluşturmak için lütfen bir kaynak sütunu seçin.',
     enterPrompt: 'Geçerli bir ChatGPT yanıtı oluşturmak için lütfen bir başlatıcı girin.',
+    currencySymbolPlacement: 'Para birimi sembolü yerleşimi',
+    percentSymbolPlacement: 'Yüzde birimi sembolü yerleşimi',
+    gptDes: 'ChatGPT Kolonu',
+    prompt: 'Başlatıcı',
+
+    //RetableGPT
+    secretKey: 'Gizli Anahtar',
+    apiKeysOpenAI: 'API Anahtarları - OpenAI API',
+    askQuesitonGpt: 'GPT ye kolon datasıyla soru sor.',
+
+    exampleGpt1: '{CompanyNameColumn}  CEO su kimdir?',
+    exampleGpt1b: '{ŞirketAdıKolonu}',
+    exampleGpt2:
+      '{CountryNameColumn}   2020 Olimpiyatlarında kaç madalya kazandı? Sadece sayısal cevaplar.',
+    exampleGpt2b: '{ÜlkeAdıKolonu}',
+    voteDes: 'Tablonuzdaki satırlara oy vermenizi sağlar.',
+    voteRule1: 'Her kullanıcı bir kez oy kullanabilir ve hiçbir geçmiş verisi kaydedilmez.',
+    voteRule2: 'Satır çoğaltıldığında veri güvenliği için oylama hücresindeki değerler sıfırlanır.',
+    voteRule3: 'Veri güvenliği için yapıştırma işlemi gerçekleştirilemez.',
+    voteRule4: 'Yalnızca "Sahip" rolüne sahip kullanıcılar hücreyi temizleyebilir.',
 
     // RetableSpreadsheet
     formShare: `Satırın paylaşılabilmesi için formun paylaşılması gerekir. 
@@ -937,6 +983,9 @@ export default {
     workspaceDesc: 'Varsayılan Çalışma Alanı',
     workspaceDescription: 'Çalışma Alanı açıklaması yazın',
     newProject: 'Proje ekle',
+    newApp: 'Uygulama ekle',
+    renameApp: 'Uygulamayı yeniden adlandır',
+    deleteApp: 'Uygulamayı sil',
     sureDeleteWorkspace: `Bu çalışma alanını silmek üzeresiniz.`,
 
     // RetableWorkspaceListView
@@ -1019,11 +1068,25 @@ export default {
     rating: 'Değerlendirme',
     lookup: 'Ara',
     rollup: 'Toparlama',
+    richtext: 'Zengin Metin',
     uuid: 'Benzersiz Tanımlayıcı',
     qrcode: 'QR Kod',
     gpt: 'GPT',
+    vote: 'Oylama',
     last100Actions: 'Son 100 aksiyon',
     '3Owner': '3 Owner',
+    proPlanTitle1: 'Çevrimiçi Formlar',
+    proPlanTitle2: 'HTML Gömme',
+    proPlanTitle3: 'Proje Sayısı',
+    proPlanTitle4: 'Tablo Sayısı',
+    proPlanTitle5: 'Proje Başına Kayıt',
+    proPlanTitle6: 'Çalışma Alanı Başına Ek Alanı',
+    proPlanTitle7: 'Güncellemek için sor',
+    proPlanTitle8: 'Tarihi değiştir',
+    proPlanTitle9: 'Enstantane fotoğraf',
+    proPlanTitle10: 'Temel ve Gelişmiş Sütun Türleri',
+    proPlanTitle11: 'Kanban, Takvim, Kart, Harita, Izgara, Liste, Form ve Grafik Görünümü',
+    proPlanTitleUnlimitedVal: 'Sınırsız',
 
     // RetableSearchInput
     searchInWorkspace: 'Çalışma Alanı veya Projelerin içinde ara',
@@ -1077,10 +1140,12 @@ export default {
     showw: 'Göster',
     personal: 'Kişisel',
     bussiness: 'İşletme',
-    settings: 'Ayarlar',
     createNewApi: 'Yeni API oluştur',
     deleteKeyWarning: 'Bu anahtarı silmek üzeresiniz.',
-
+    organizationAdminAccount: 'Organizasyon yöneticisi',
+    organizationDescriptionAccount: 'Organizasyon açıklaması',
+    organizationNameAccount: 'Organizasyon adı',
+    settings: 'Ayarlar',
     // saga swall
     invSent: '👋 Zaten bir davetiye 📧 e-postası gönderdik. 👍',
     justNow: 'Şu anda',
@@ -1228,8 +1293,8 @@ export default {
     isnotEmptyFilter: 'boş değil',
     is: '=',
     isNot2: '≠',
-    isBefore: 'önce',
-    isAfter: 'sonra',
+    isBefore: 'öncesinde',
+    isAfter: 'sonrasında',
     notauth: 'yetkili olmayan',
     form: 'Form',
     otherusers: 'Diğer Kullanıcılar',
@@ -1243,6 +1308,30 @@ export default {
     atSchTime: 'Planlanan zamanda',
     sendRecords: 'Kayıtları gönder',
     selectToField: '"Kime" alanını seçin.',
+    callWebhooks: 'Webhook çağır',
+    params: 'Parametreler',
+    headers: 'Başlıklar',
+    body: 'Gövde',
+    webhookErrorInvalidUrl: 'Geçerli bir URL giriniz.',
+    webhookErrorRequiredHeaders: 'Başlıklar bölümündeki ad ve değer alanlarını boş bırakmayınız.',
+    queryName: 'Sorgu adı',
+    queryValue: 'Sorgu değeri',
+    headerName: 'Başlık adı',
+    headerValue: 'Başlık değeri',
+    contentType: 'İçerik Türü',
+    httpMethod: 'Http Yöntemi',
+    noParamsInfo: 'Bu istekte herhangi bir sorgu parametresi mevcut değildir.',
+    automationLogRunSuccess: 'Otomasyon çalıştırıldı.',
+    automationLogRunError: 'Otomasyon hatayla sonuçlandı.',
+    automationLogCreate: 'Otomasyon oluşturuldu.',
+    automationLogUpdate: 'Otomasyon güncellendi.',
+    automationLogSendEmail: 'Otomasyon {userName} tarafından tetiklendi ve e-posta gönderildi.',
+    automationLogSendEmailWithoutUser: 'Otomasyon tetiklendi ve e-posta gönderildi.',
+    request: 'İstek',
+    response: 'Yanıt',
+    automationCreatedByUser: 'Otomasyon {userName} tarafından oluşturuldu.',
+    automationUpdatedByUser: 'Otomasyon {userName} tarafından güncellendi.',
+    automationTriggedByUser: 'Otomasyon {userName} tarafından tetiklendi.',
 
     // datavalidation
     minvalue: 'Minimum karakter:',
@@ -1653,6 +1742,8 @@ export default {
       'Grafiğinizi özelleştirmek istiyorsanız değerleri değiştirin' +
       ' veya grafik türünü değiştirin. 🥧',
     exCharts: 'Aşağıda örnek çizelgeleri görebilirsiniz.',
+    pieChartShowValue: 'Değer Göster',
+    pieChartShowPercentage: 'Yüzdelik Göster',
 
     // Retable List View
     warningDeleteLastRow: 'Son satırı silemezsiniz.',
@@ -1700,6 +1791,15 @@ export default {
     Tek bir özel alana odaklanın ve sahip olduğunuz tüm ilgili bilgileri bu alana aktarın.`,
     forUseInOrganization: 'Organizasyonda kullanım için',
     forPersonalUse: 'Kişisel kullanım için',
+    createOrgWSDesc1: 'Organizasyonda oluşturduğunuz projelere marka uygulayabilirsiniz.',
+    createPersonalWSDesc1:
+      'Kişisel çalışma alanınızda oluşturduğunuz projelere markalama uygulayamazsınız.',
+    createOrgWSDesc2:
+      'Kuruluş çalışma alanını oluşturmak için önce bir kuruluş oluşturmanız gerekir.',
+    createOrgWSDesc3: 'Yalnızca İş planıyla kullanılabilir.',
+    createOrgWSDesc4:
+      'Kuruluş çalışma alanı oluşturulamıyor. Markalama Ekip planında uygulanabilir.',
+    firstlyYouMustCreateAnOrganization: 'First, create an organization.',
     typeProjectName: 'Proje adı yazın',
     typeProjectDescription: 'Proje açıklaması yazın',
     projectNameTitle: 'Proje Adı',
@@ -1709,6 +1809,7 @@ export default {
     //Team
     createTeam: 'Takım Oluştur',
     addTeam: 'Takım ekle',
+    add: 'Ekle',
     createOrganization: 'Organizasyon ekle',
     addOrganization: 'Organizasyon ekle',
     pressCreateTeam: '"Takım Oluştur" butonuna basarak yeni bir takım oluşturabilirsin.',
@@ -1735,9 +1836,34 @@ export default {
     deleteTeamMemberText: 'Üyeyi silmek üzeresiniz.',
     youCantRemoveMembers: 'Siz üyeleri silemezsiniz.',
     memberNotFound: 'Üye bulunamadı!',
+    add: 'Ekle',
     memberNotFoundWarning: 'Takıma eklemek için üye bulunamadı',
+    //RetableOrganizationSettings
+    organizationDescription: 'Organizasyon Açıklaması',
+    //RetableOrganizationMembers
+    noInvitedMembersFound: 'Davet edilen üye bulunamadı.',
+
+    //RetableOrganizationDetail
+    brand: 'Marka',
+    members: 'Üyeler',
+    settings: 'Ayarlar',
+
+    //RetableOrganizationBrand
+    primaryColor: 'Ana Renk',
+    secondaryColor: 'İkincil Renk',
+    chooseAnImage: 'Bir Resim Seçiniz',
+    setDefault: 'Varsayılana Ayarla',
+    exampleText: 'Örnek Metin',
+    exampleButton: 'Örnek Buton',
+    brandIconValidation1: 'PNG veya JPEG dosya türü.',
+    brandIconValidation2: '1MB dosya boyutunun altında.',
+    brandIconValidation3: 'Kare çözünürlük(ör. 40x40, 100x100).',
+    brandIconValidation4: 'Daha iyisi için 16:3 en boy oranı.',
 
     // Brand
+    brandTitle: 'Marka Adı',
+    brandLogo: 'Marka Logosu',
+    brandIcon: 'Marka Simgesi',
     brandTitleMustMin3Char: 'Marka başlığı minimum 3 karakter olmalıdır.',
     brandTitleCanNotBeEmpty: 'Marka başlığı boş olamaz.',
     brandIconSizeError: 'Marka ikonu 1MB ve altında dosya boyutuna sahip olmalıdır.',
@@ -1746,6 +1872,15 @@ export default {
     brandWrongType: 'Hatalı dosya formatı.',
     brandReset: 'Sıfırla',
     brandResetWarning: 'Marka ayarlarınızı sıfırlamak üzeresiniz.',
+    branding: 'Branding',
+    presentYourBrand:
+      'Organizasyon markalaması, yalnızca kuruluş çalışma alanında oluşturulan projelere uygulanabilir. "Hesaba Genel Bakış" sayfasındaki "Organizasyon" sekmesinden marka ayarlarınızı özelleştirin.',
+    presentYourBrand2:
+      'Yalnızca Ekip için kullanılabilir. "Hesaba Genel Bakış" sayfasındaki "Organizasyon" sekmesinden marka ayarlarınızı özelleştirin.',
+    presentYourBrand3:
+      'Kullanıcının, Markalama butonunu kullanabilmesi için Sahip veya Editör yetkisine sahip olması gerekir.',
+    presentYoutBrand4:
+      'Sadece üyesi olduğunuz kuruluş için geçerlidir. "Hesaba Genel Bakış" sayfasındaki "Organizasyon" sekmesinden marka ayarlarınızı özelleştirin.',
 
     //RetableTeamMemberRole
     inactive: 'Pasif',
@@ -1837,6 +1972,8 @@ export default {
     createNewCalendarColumn: 'Yeni bir tarih&saat kolonu oluştur',
     usingCalendarColumn: 'Kullanılan tarih&saat kolonu',
     usingDateRange: 'Tarih aralığı kullanılıyor',
+    //RetableMApModal.js
+    locationCell: 'Konum Hücresi',
     setEndDate: 'Bir bitiş tarihi alanı belirle',
 
     // Map View
@@ -1859,6 +1996,24 @@ export default {
     week: 'Hafta',
     day: 'Gün',
     today: 'Bugün',
+    //AddViewMenu.js
+    kanbanView: 'Kanban Görünümü',
+    calenderView: 'Takvim Görünümü',
+    mapView: 'Harita Görünümü',
+    cardView: 'Kart Görünümü',
+    addAview: 'Görünüm ekle',
+    //locationColumnInput
+    address: 'Adres',
+
+    //KanbanStackHeader.js
+    uncategorized: 'Kategorize edilmemiş',
+    record: 'kayıt',
+
+    //AddNewStack.js
+    addNewStack: 'Yeni Yığın Ekle',
+
+    //RetableKanbanViewToolbar.js
+    stackedBy: 'Yığın kaynağı',
 
     // Kanban View
     deleteStack: 'Yığını Sil',
@@ -1869,7 +2024,7 @@ export default {
     usingSelectOrCollaboratorColumn: 'Kullanılan tek seçim / ortak çalışan kolonu',
     createAKanbanColumn: 'Bir tek seçim ya da ortak çalışan kolonu oluşturun',
     selectAFieldKanban: 'Kanban Field',
-    yourRowsStackedBased: 'Kayıtlarınız seçtiğini kolona göre görüntülenecek.',
+    yourRowsStackedBased: 'Kayıtlarınız seçtiğiniz kolona göre görüntülenecek.',
     duplicateItem: 'Öğeyi yinele',
     itemDetail: 'Öğe ayrıntıları',
     addNewItem: 'Yeni öğe ekle',
@@ -1883,9 +2038,13 @@ export default {
 
     // Desktop
     openWithRetable: 'Retable ile aç',
-    openAsNewProject: 'Yeni Proje Aç',
-    existingVersionWillOpen: '*Güncel sürüm açılacaktır.',
-    versionYouWantToOpenWillOpen: '*Yüklenen sürüm açılacaktır.',
+    noWorkspaceWarning:
+      'Bu sürümü açabileceğiniz bir çalışma alanınız yok. Bir çalışma alanı ekleyin.',
+    currentVersionTitle: 'Mevcut projeyi aç',
+    currentVersionDescription: 'Projenin son versiyonu açar.',
+    existVersionTitle: 'Yeni proje ekle',
+    existVersionDescription: 'Bir çalışma alanı seçin ve yeni bir Retable projesi oluşturun.',
+    projectPermissionWarning: `Bu projeye erişim izniniz yok. Proje silinmiş olabilir veya projeden çıkarılmış olabilirsiniz. Yeni bir proje eklemeyi deneyebilirsiniz.`,
     open: 'Aç',
 
     // Switch View
@@ -1911,11 +2070,19 @@ export default {
     hideAllColumnNames: 'Bütün kolon isimlerini gizle',
 
     // Form View
+    dragImage: 'Buraya bir resim sürükleyin veya seçin',
+
+    // Retable App
+    appNameTitle: 'Uygulama Adı',
+    typeAppName: 'Uygulama adı yazın',
+    saveAsPDF: 'PDF Olarak Kaydet',
+    // Form View
     dragImage: 'Drag or select an image here',
 
     // Card View
     customizeCards: 'Kartları Özelleştir',
     imageColumn: 'Görüntü Kolonu',
+    selectAnImageColumn: 'Bir görüntü kolonu seç',
     selectAnCardColumn: 'Bir görüntü, qr veya renk kolonu seç',
     usingCardColumn: 'Kullanılan görüntü/qr/renk kolonu',
     selectCardColumnDesc:
@@ -1924,6 +2091,9 @@ export default {
     addCardColumn: 'Bir görüntü/qr/renk kolonu ekleyin',
     createNewCardColumn: 'Yeni bir {columnType} kolonu ekleyin',
     deleteItem: 'Öğeyi sil',
+
+    // Elements Left Content
+    elements: 'Elementler',
 
     // General Toast
     tableCopied: 'Tablo kopyalandı.',
@@ -1999,6 +2169,9 @@ export default {
     writer: 'Yazar',
     others: 'Diğer',
 
+    //FormulaPopover.js
+    examples: 'Örnek',
+
     // Congrats.js
     congratulations: 'Tebrikler',
     congratsDescription:
@@ -2008,6 +2181,168 @@ export default {
       "Retable'ın Capterra veya G2'de Retable'a yorum bırakmam için beni bağlamasına izin veriyorum, böylece 10$'lık bir hediye çeki alabilirim.",
     congratsDiscord: 'Soruların mı var? Discord sunucumuza katıl',
     sweet: 'Sweet',
+    //Header cell
+    referanceHeaderCellFrom: "{to} {from}'ndan",
+
+    //RetableAutomationTriggerInput partII
+    //month part
+    january: 'Ocak',
+    february: 'Şubat',
+    march: 'Mart',
+    april: 'Nisan',
+    may: 'Mayıs',
+    june: 'Haziran',
+    july: 'Temmuz',
+    august: 'Ağustos',
+    september: 'Eylül',
+    october: 'Ekim',
+    november: 'Kasım',
+    december: 'Aralık',
+
+    //dayOfWeek part
+    sunday: 'Pazar',
+    monday: 'Pazartesi',
+    tuesday: 'Salı',
+    wednesday: 'Çarşamba',
+    thursday: 'Perşembe',
+    friday: 'Cuma',
+    saturday: 'Cumartesi',
+
+    //dayOfMonth part
+    auto1st: '1.',
+    auto2nd: '2.',
+    auto3rd: '3.',
+    auto4th: '4.',
+    auto5th: '5.',
+    auto6th: '6.',
+    auto7th: '7.',
+    auto8th: '8.',
+    auto9th: '9.',
+    auto10th: '10.',
+    auto11th: '11.',
+    auto12th: '12.',
+    auto13th: '13.',
+    auto14th: '14.',
+    auto15th: '15.',
+    auto16th: '16.',
+    auto17th: '17.',
+    auto18th: '18.',
+    auto19th: '19.',
+    auto20th: '20.',
+    auto21st: '21.',
+    auto22nd: '22.',
+    auto23rd: '23.',
+    auto24th: '24.',
+    auto25th: '25.',
+    auto26th: '26.',
+    auto27th: '27.',
+    auto28th: '28.',
+    auto29th: '29.',
+    auto30th: '30.',
+    auto31st: '31.',
+
+    //tabs part
+    tabsSeconds: 'Saniye',
+    tabsMinutes: 'Dakika',
+    tabsHours: 'Saat',
+    tabsDay: 'Gün',
+    tabsMonth: 'Ay',
+    tabsYear: 'Yıl',
+
+    //quartz part
+    everyLabel: 'Her gün',
+    dayOfWeekIncrementLabel1: 'Her',
+    dayOfWeekIncrementLabel2: 'gün başlayarak',
+
+    dayOfMonthIncrementLabel1: 'Her',
+    dayOfMonthIncrementLabel2: 'gün başlayarak',
+    dayOfMonthIncrementLabel3: 'ayın günü',
+
+    dayOfWeekAndLabel: 'Haftanın belirli günü (bir veya daha fazla seçin)',
+
+    dayOfWeekRangeLabel1: 'Her gün arasında',
+    dayOfWeekRangeLabel2: 've',
+
+    dayOfMonthAndLabel: 'Ayın belirli günü (bir veya daha fazla seçin)',
+
+    dayOfMonthLastDayLabel: 'Ayın son gününde',
+    dayOfMonthLastDayWeekLabel: 'Ayın son iş gününde',
+    dayOfWeekLastNTHDayWeekLabel1: 'son',
+    dayOfWeekLastNTHDayWeekLabel2: 'ayın',
+    dayOfMonthDaysBeforeEndMonthLabel: 'ay sonundan önceki gün(ler)',
+
+    dayOfMonthNearestWeekDayOfMonthLabel1: 'Hafta içi en yakın gün (Pazartesiden Cumaya)',
+    dayOfMonthNearestWeekDayOfMonthLabel2: 'ayın',
+
+    dayOfWeekNTHWeekDayOfMonthLabel1: 'üzerinde',
+    dayOfWeekNTHWeekDayOfMonthLabel2: 'ayın',
+
+    monthEveryLabel: 'Her ay',
+    monthIncrementLabel1: 'Her',
+    monthIncrementLabel2: 'ay(lar)dan başlayan ay',
+    monthAndLabel: 'Belirli bir ay (bir veya daha fazla seçin)',
+    monthRangeLabel1: 'Aylar arasında her ay',
+    monthRangeLabel2: 've ay',
+
+    secondEveryLabel: 'Her saniye',
+    secondIncrementLabel1: 'Her',
+    secondIncrementLabel2: 'saniyeden başlayan saniye(ler)',
+    secondAndLabel: 'Belirli saniye (bir veya daha fazla seçin)',
+    secondRangeLabel1: 'Saniyeler arasında her saniye',
+    secondRangeLabel2: 've saniye',
+
+    minuteEveryLabel: 'Her dakika',
+    minuteIncrementLabel1: 'Her',
+    minuteIncrementLabel2: 'dakikadan başlayan dakika(lar)',
+    minuteAndLabel: 'Belirli dakika (bir veya daha fazla seçin)',
+    minuteRangeLabel1: 'Dakikalar arası her dakika',
+    minuteRangeLabel2: 've dakika',
+
+    hourEveryLabel: 'Her saat',
+    hourIncrementLabel1: 'Her',
+    hourIncrementLabel2: 'saatte başlayan saat(ler)',
+    hourAndLabel: 'Belirli saat (bir veya daha fazla seçin)',
+    hourRangeLabel1: 'Saatler arası her saat',
+    hourRangeLabel2: 've saat',
+
+    yearEveryLabel: 'Herhangi bir yıl',
+    yearIncrementLabel1: 'Her',
+    yearIncrementLabel2: 'yıldan başlayan yıl(lar)',
+    yearAndLabel: 'Belirli bir yıl (bir veya daha fazla seçin)',
+    yearRangeLabel1: 'Yıl arasında her yıl',
+    yearRangeLabel2: 've yıl',
+
+    //unix part starts here
+
+    uDayEveryLabel: 'Her gün',
+    uDayOdWeekIncrementLabel1: 'Her',
+    uDayOdWeekIncrementLabel2: 'haftanın günleri',
+    uDayOfMonthIncrementLabel1: 'Her',
+    uDayOfMonthIncrementLabel2: 'ayın günleri',
+    uDayOdWeekAndLabel: 'Haftanın belirli günü (bir veya daha fazla seçin)',
+    uDayOdMonthAndLabel: 'Ayın belirli günü (bir veya daha fazla seçin)',
+
+    uMonthEveryLabel: 'Her ay',
+    uMonthIncrementhLabel1: 'Her',
+    uMonthIncrementhLabel2: 'ay(lar)',
+    uMonthAndLabel: 'Belirli bir ay (bir veya daha fazla seçin)',
+    uMonthRangeLabel1: 'Aylar arasında her ay',
+    uMonthRangeLabel2: 've ay',
+
+    uMinuteEveryLabel: 'Her dakika',
+    uMinuteIncrementLabel1: 'Her',
+    uMinuteIncrementLabel2: 'dakika(lar)',
+    uMinuteAndLabel: 'Belirli dakika (bir veya daha fazla seçin)',
+    uMinuteRangeLabel1: 'Dakikalar arası her dakika',
+    uMinuteRangeLabel2: 've dakika',
+
+    uHourEveryLabel: 'Her saat',
+    uHourIncrementLabel1: 'Her',
+    uHourIncrementLabel2: 'saat(ler)',
+    uHourAndLabel: 'Belirli saat (bir veya daha fazla seçin)',
+    uHourRangeLabel1: 'Saatler arası her saat',
+    uHourRangeLabel2: 've saat',
+    ///////////RetableAutomationTriggerInput partII    ends here /////////////
 
     // Groupbymenu
     groupByColumnInfo: 'Sütun verilerine, gruplandırılmış sütun gizliyken erişilebilir.',
@@ -2016,5 +2351,39 @@ export default {
     digitSeparator: 'Rakam Ayırıcı',
     comma: 'Virgül',
     dot: 'Nokta',
+
+    //RetableThemeSwitch
+    themeSwitch: 'Temayı değiştir',
+
+    //RetableTableViewBody
+    enterToAddNewRow: 'Yeni satır eklemek için Enter tuşuna basınız.',
+
+    //RetableFreeTrialModal
+    freeTrialModalTitle: 'Profesyonel',
+    // Delete Account
+    deleteMyAccount: 'Hesabımı Sil',
+    delErrOrgAdmin: 'Hesabını silmeden önce organizasyonu silmelisiniz.',
+    delErrOrgMember:
+      'Hesabını silmek için organizasyondan çıkartılman gerekiyor. Organizasyon sahibi ile iletişime geçebilirsin.',
+    deleteAccount: 'Hesabı Sil',
+    thisAccountWillBeDeleted: 'Bu hesap silenecektir.',
+    needToKnowBeforeDeleteAccount: 'Hesap silinmeden önce bilinmesi gerekenler',
+    whatWillHappenWorkspace: 'Hesabımı silersem çalışma alanlarıma ne olacak?',
+    whatWillHappenWorkspaceContent:
+      "Çalışma alanınızdaki tek kullanıcı sizseniz, çalışma alanlarınız tamamiyle silinir ve bunlara bir daha erişemezsiniz. Çalışma alanlarınızda birden fazla 'Sahip' rolünde kullanıcı varsa, bunlardan biri çalışma alanınıza 'Oluşturan' olarak atanır ve bu çalışma alanları silinmez.",
+    whatWillHappenData: 'Verilerime ne olacak?',
+    whatWillHappenDataContent:
+      'Hesabınızın silinmesi durumunda, silinen çalışma alanındaki tüm projeler, tablolar, görünümler ve veriler kalıcı olarak silinecektir.',
+    isMyaccountTemporarlyDeleted: 'Hesabım geçici olarak mı siliniyor, tekrar üye olabilir miyim?',
+    isMyaccountTemporarlyDeletedContent:
+      'Hesabın silindikten sonra tekrar üye olabilirsin fakat verilerine erişemezsin, yeni bir kullanıcı olarak tanımlanırsın.',
+    dontForgetBackup: 'Hesabını silmeden önce verilerini yedeklemeyi unutma!',
+    notBeAbleToAccessData:
+      'Hesabını sildiginde bu hesap ile ilişkili verilerine ulaşamazsın bu yüzden hesabını silmeden önce önemli verilerini dışa aktarmayı ve yedeklemeyi unutma.',
+    acceptDeleteAccount: 'Yukarıda yazılan maddeleri okudum ve hesabımı silmeyi onaylıyorum.',
+    deleteAccountDoesNotMatch:
+      'Giriş yapılan hesap ile silme isteği yapılan hesap eşleşmiyor. Lütfen silme isteği yapılan hesap ile giriş yapınız.',
+    accountDeleteSuccess: 'Hesabınız başarılı bir şekilde silindi.',
+    delErrAppsumoUser: "Hesabınızı silmeden önce AppSumo'dan iade yapmalısınız.",
   },
 };
