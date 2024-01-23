@@ -1,12 +1,9 @@
 /* eslint-disable max-len */
 /* eslint-disable import/no-anonymous-default-export */
 import { LOCALES } from '../locales';
-import { PACKAGES_TR } from './packages/index';
 
 export default {
   [LOCALES.TURKISH]: {
-    ...PACKAGES_TR,
-
     // Dashboard
     welcome: "Retable'a hoş geldiniz!",
     welcome2: 'Bu kılavuz, kontrol panelinizin temellerini anlamanıza yardımcı olacaktır.',

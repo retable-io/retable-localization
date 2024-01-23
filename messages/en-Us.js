@@ -1,12 +1,9 @@
 /* eslint-disable max-len */
 /* eslint-disable import/no-anonymous-default-export */
 import { LOCALES } from '../locales';
-import { PACKAGES_EN } from './packages/index';
 
 export default {
   [LOCALES.ENGLISH]: {
-    ...PACKAGES_EN,
-
     // Dashboard
     getStartedWith: 'Get Started with',
     retablePro30: 'Retable PRO plan for 30 days',
